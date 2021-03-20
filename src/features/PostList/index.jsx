@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
-import PostListFeatures from "./features/PostList";
-import PostList from "./features/PostList/components";
-import TodoFeature from "./features/Todo";
+import React, { useEffect,useState} from 'react';
+import PropTypes from 'prop-types';
+import PostList from './components';
 
-function App() {
+PostListFeatures.propTypes = {
+    
+};
+
+function PostListFeatures(props) {
     const [postList,setPostList] = useState([]);
 
     useEffect(() => {
@@ -19,13 +22,13 @@ function App() {
         }
 
         fetchPostList();
-      },[]);
-  return (
-    <div className="App">
-      <PostList posts = {postList}></PostList>
+    },[]);
 
-    </div>
-  );
+    return (
+        <div>
+            <PostList posts = {PostListFeatures}></PostList>
+        </div>
+    );
 }
 
-export default App;
+export default PostListFeatures;
