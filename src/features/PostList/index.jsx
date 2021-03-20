@@ -26,7 +26,7 @@ function PostListFeatures(props) {
 
     return (
         <div>
-            <PostList posts = {PostListFeatures}></PostList>
+            <PostList posts = {postList}></PostList>
         </div>
     );
 }
